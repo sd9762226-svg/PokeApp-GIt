@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ff9a45">
+  <meta name="description" content="PokeApp: explorá la Pokédex, descubrí Pokémon y participá de una aventura.">
+  <title>PokeApp | Pokédex Web</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script type="module" src="./Js/app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="site-header">
+      <a class="brand" href="#inicio" data-route="inicio" aria-label="PokeApp, inicio">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span class="brand-name">Poke<span>App</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Abrir navegación" aria-expanded="false">☰</button>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#pokedex" data-route="pokedex">Pokédex</a>
+        <a href="#cuenta" data-route="cuenta">Iniciar sesión / Registrarse</a>
+        <a href="#batalla" data-route="batalla">Lore - (Juego)</a>
+      </nav>
+      <form class="header-search" id="header-search" role="search">
+        <label class="sr-only" for="header-query">Buscar Pokémon</label>
+        <span aria-hidden="true">⌕</span>
+        <input id="header-query" name="query" type="search" placeholder="Buscar Pokémon..." autocomplete="off">
+      </form>
+      <div class="user-menu" id="user-menu"></div>
+    </header>
+
+    <main id="app-main" tabindex="-1"></main>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <footer class="site-footer">PokeApp <span>•</span> Tu próxima aventura empieza acá</footer>
+  </div>
+</body>
+</html>
